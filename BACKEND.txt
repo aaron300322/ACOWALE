@@ -1,0 +1,18 @@
+# Step 1: Update the requirements.txt with compatible versions, aligning with other dependencies
+with open('requirements.txt', 'w') as f:
+    f.write(
+        "Flask==2.0.1\n"
+        "Werkzeug==2.0.1\n"
+        "requests==2.31.0\n"  # a version of requests >=2.27.0 to align with dependencies
+    )
+
+print("Updated requirements.txt with new requests version:")
+
+# Display the contents of the requirements.txt
+!cat requirements.txt
+
+# Install the specified dependencies
+print("\\nReinstalling dependencies...")
+!pip install --upgrade -r requirements.txt --no-cache-dir
+
+print("\\nDependencies successfully installed with aligned versions.")

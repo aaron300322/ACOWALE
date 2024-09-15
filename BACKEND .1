@@ -1,0 +1,21 @@
+    f.write(
+        "Flask==2.0.1\
+"
+        "Werkzeug==2.0.1\
+"
+        "requests==2.31.0\
+"  # a version of requests >=2.27.0 to align with dependencies
+    )
+
+print("Updated requirements.txt with new requests version:")
+
+# Display the contents of the requirements.txt
+!cat requirements.txt
+
+# Install the specified dependencies
+print("\
+Reinstalling dependencies...")
+!pip install --upgrade -r requirements.txt --no-cache-dir
+
+print("\
+Dependencies installation complete.")
